@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="APIPersistenceUnit" transaction-type="JTA">
+        <class>com.tachyon.api.domain.contact.Contact</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <!--<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />-->
+            <!--<property name="javax.persistence.jdbc.url"    value="jdbc:sqlserver://10.201.59.77;databaseName=Person;useUnicode=true;characterEncoding=UTF-8" />-->
+            <!--<property name="javax.persistence.jdbc.user" value="alireza" />-->
+            <!--<property name="javax.persistence.jdbc.password" value="alireza95" />-->
+            <!--<property name="eclipselink.ddl-generation" value="create-tables" />-->
+            <!--<property name="eclipselink.ddl-generation.output-mode" value="database" />-->
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:test" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+        </properties>
+    </persistence-unit>
+</persistence>
